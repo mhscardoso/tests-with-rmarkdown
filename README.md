@@ -30,6 +30,12 @@ rmd() {
 }
 ```
 
+To call the function I just use:
+
+```{bash}
+rmd <filename> # without extension!
+```
+
 ## Why you use "hello" for filenames?
 
 For testing!!!
