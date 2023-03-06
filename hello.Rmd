@@ -1,0 +1,64 @@
+---
+title: "Tests with R Markdown"
+output: "pdf_document" 
+---
+
+# 1. Writing functions in Python:
+
+## 1.1 Defining a function
+
+In Python, a function is defined with the keyword ```def``` followed by the name from your choice.
+
+Let's see an example below:
+
+```{python}
+def hello(name: str) -> str:
+    """
+        Input: name: str
+        Output: str
+    """
+    return f'hello, {name}'
+```
+
+The function above receives a name, of type ```str``` and returns a string saying "hello".
+
+Let's test this Python function by running:
+```{python}
+hello('Jonh Doe')
+```
+
+As expected, you can see the output of this function.
+
+## 1.2 More operations with arguments
+
+In Python we can make operations with the arguments passed to a function. Let's calculate the hypotenuse of a right triangle, given its cathets.
+
+We already know the Pythagorean Theorem:
+
+\[a^2 = b^2 + c^2\]
+
+where $a$ is the hypotenuse. $b$ and $c$ are the two cathets.
+
+Let's apply this formula in python, in a function which receives $b$ and $c$:
+
+```{python}
+# import math library
+from math import sqrt
+
+def hypotenuse(b: float, c: float) -> float:
+    return sqrt(b**2 + c**2)
+```
+
+After this, we can test the function:
+
+```{python}
+# import math library
+cathet_b = 3
+cathet_c = 4
+
+hyp = hypotenuse(cathet_b, cathet_c)
+
+print(f'The hypotenuse of the triangle is {hyp}')
+```
+
+As we can see, the result is the correct answer.
